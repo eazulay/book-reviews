@@ -88,6 +88,9 @@ add_filter( 'get_the_excerpt', function( $post_excerpt, $post ){
 	return $post_excerpt;
 }, 10, 2 );
 
+/**
+ * Add shortcode [bkrv_books] to print a list of all Books with status Published
+ */
 add_shortcode( 'bkrv_books', function( $attributes ){
 	$books = get_posts( array(
 		'post_type' => 'bkrv_book',
@@ -99,4 +102,12 @@ add_shortcode( 'bkrv_books', function( $attributes ){
 	}
 	$result .= '</ul>';
 	return $result;
+} );
+
+/**
+ * Add shortcode [bkrv_author] to print Author's name
+ */
+add_shortcode( 'bkrv_author', function( $attributes ){
+    $author = get_option( 'bkrv_author_name' );
+    return $author;
 } );
