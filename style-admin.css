@@ -1,0 +1,32 @@
+/* Listing tables */
+.fixed .column-col_review_date {
+    width: 8em;
+}
+.fixed .column-col_status {
+    width: 8em;
+}
+.fixed .column-col_date {
+    width: 11em;
+}
+@media screen and (max-width: 782px) {
+    .wp-list-table .toggle-row {
+        display: inline;
+    }
+    .wp-list-table td:not(.hidden):not(:first-child):not(:nth-child(2)) {
+        display: none;
+    }
+    .wp-list-table .is-expanded {
+        background: #fff !important;
+    }
+    .wp-list-table .is-expanded td:not(.hidden):not(:first-child) {
+        min-width: calc(106vw - 190px);
+        left: 110px;
+        top: -40px;
+        overflow: visible;
+    }
+    .wp-list-table tr:not(.inline-edit-row):not(.no-items) td:not(.column-primary)::before {
+        position: absolute;
+        left: -100px;
+        color: #2271b1;
+    }
+}

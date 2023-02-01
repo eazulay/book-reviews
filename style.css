@@ -1,0 +1,64 @@
+.bkrv-short-desc {
+    font-weight: bold;
+    text-align: center;
+}
+.bkrv-excerpt-more {
+    padding: 0.1rem 0.5rem;
+    background: #dde;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5em;
+}
+.bkrv-popup {
+    display: none;
+}
+.bkrv-pop-outer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+}
+.bkrv-pop-inner {
+    position: relative;
+    width: 60rem;
+    max-width: 90%;
+    padding: 0.5rem 1rem;
+    border: 2px solid #444;
+    margin: 0 auto;
+    top: 8vh;
+    background: #fff;
+    height: 84vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+/* Close popup X button */
+.bkrv-close-popup {
+    background: #955;
+    color: #fff;
+    border: 1px solid #444;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.2em 0.5em 0.3em 0.45em;
+    position: absolute;
+    top: calc(8vh + 3px);
+    left: calc(50% - min(30rem,45%) + 3px);
+    z-index: 1;
+    border-radius: 0 0 0.5em 0;
+    cursor: pointer;
+}
+.bkrv-close-popup:hover {
+    background: #E81123;
+}
+h4.bkrv-review-title {
+    margin-bottom: 0.5rem;
+}
+em.bkrv-first-published {
+    float: right;
+}
+.clear-fix {
+    clear: both;
+}
