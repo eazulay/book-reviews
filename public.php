@@ -87,3 +87,16 @@ add_filter( 'get_the_excerpt', function( $post_excerpt, $post ){
 	}
 	return $post_excerpt;
 }, 10, 2 );
+
+add_shortcode( 'bkrv_books', function( $attributes ){
+	$books = get_posts( array(
+		'post_type' => 'bkrv_book',
+		'post_status' => 'publish'
+	) );
+	$result = '<ul>';
+	foreach($books as $book){
+		$result .= '<li><a href="' . get_post_permalink( $book ) . '">' . $book->post_title . '</a></li>';
+	}
+	$result .= '</ul>';
+	return $result;
+} );
