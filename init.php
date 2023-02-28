@@ -47,6 +47,7 @@ function bkrv_create_book_post_type() {
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => true,
+        'menu_icon'          => 'dashicons-book',
 		'menu_position'      => 20, // below Pages
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	);

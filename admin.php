@@ -1,6 +1,6 @@
 <?php
 defined( 'ABSPATH' ) or die( 'You cannot run this script directly.' );
-require_once('classes.php');
+require_once('classes.php'); // extends WP_List_Table
 
 /**
  * Enqueue scripts for all admin pages.
